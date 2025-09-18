@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+    <?php
+        const universidad="Euskal Erriko Unibertsitate" ;
+        const creditos_grado=240; const precio_curso=1230.75;
+        $nombre_alumno="Daniel" ; $creditos_actuales=45;
+        $nota_media=7.8; $curso_finalizado=false; 
+    ?>
+
+    <head>
+
+    </head>
+
+    <body>
+        <h1>Hola mundo </h1>
+        
+            <h2>Informacion del Alumno</h2>
+            <p>Nombre del alumno : <?php print($nombre_alumno); ?></p>
+            <p>Universidad : <?php print(universidad); ?></p>
+            <p>Creditos hasta el momento :  <?php print(($creditos_actuales/creditos_grado)*10); ?></p>
+            <p>Nota media : <?php print($nota_media); ?></p>
+            <p>Curso finalizado : <?php if($curso_finalizado){
+             print("si")
+            }else{
+                 print("no")
+            }
+            ?></p>
+            <p>Pagar : <?php print(precio_curso) ?> </p>
+
+    </body>
+
+</html>
