@@ -4,7 +4,7 @@
  
     $random=0;
     $intentos=0;
-    $numeros_salidos = array();
+    $numeros_salidos = array();//array para guardar los numeros salidos
     do {
         $intentos++;
         $random = rand(1, 10);
@@ -27,5 +27,5 @@
             printf("<b>Te quedaste sin intentos. El numero era %d</b>", $num);
         }
 
-    } while ($intentos < 5);
+    } while ($intentos < 5); 
 ?>
