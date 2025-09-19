@@ -1,5 +1,7 @@
 <?php
 $viajesDeseados=array("Italia", "Alemania", "Finlandia", "Ecuador", "Japon");
+print_r($viajesDeseados);
+echo "<br>";
 $viajesDeseados[]="Egipto";
 $viajesDeseados[]="Brasil";
 $visitados_2023=array("Finlandia", "Costa Rica");

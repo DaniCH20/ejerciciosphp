@@ -1,6 +1,8 @@
 <?php
 $paises = ["alemania", "rumania", 
 "italia", "chile","uruguay","australia"];
+print_r($paises);
+echo "<br>";
 unset($paises[0]);
 unset($paises[3]);
 unset($paises[5]);

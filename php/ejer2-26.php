@@ -12,7 +12,7 @@
         printf("Intento %d: salió el numero %d<br>", $intentos, $random);
         if (in_array($random, $numeros_salidos)) {
             printf("Has vuelto a introducir el numero %d te quedan %d intentos<br><br>", $random,$intentos);
-            $intentos--; // le restamos 1 a los intentos
+            $intentos--; 
             continue; // saltar a la siguiente iteración del bucle
         }
         if ($random == $num) {
@@ -20,7 +20,7 @@
             break; // salir del bucle no olvidar
         } else {
             printf("No es el numero, probemos de nuevo...<br><br>");
-            $numeros_salidos[] = $random; // añadir el número al array de números salidos
+            $numeros_salidos[] = $random;
         }
 
         if ($intentos == 5) {
