@@ -1,6 +1,6 @@
 <?php
 $array = [0=>"Piedra", 1=>"Papel", 2=>"Tijera"];
-
+include "diseño.php";
 $jugador1 = rand(0,2);
 $maquina = rand(0,2);
 echo "Tu eleccion : ";
@@ -20,4 +20,5 @@ function seleccionarGanador($jugador1, $maquina) {
         return "Ha ganado el ordenador! " . $array[$maquina] . " vence a " . $array[$jugador1];
     }
 }
+include "pie.html";
 ?>

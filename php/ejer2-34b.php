@@ -2,7 +2,7 @@
 $array = [0 => "Piedra", 1 => "Papel", 2 => "Tijera"];
 $puntosM=0;
 $puntosJ=0;
-
+Include "diseño.php";
 function seleccionarGanador($jugador1, $maquina)
 {
    global $array, $puntosM, $puntosJ;
@@ -38,6 +38,6 @@ function partida()
         echo "<h2>La máquina ganó la partida </h2>";
     }
 }
-
 partida();
+include "pie.html";
 ?>
