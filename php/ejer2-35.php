@@ -23,10 +23,9 @@ function acces($intentos){
 }
 function horario(){
     $hora=date("h");
-    echo $hora;
-    if($hora>6 && $hora<12){
+    if($hora>6 && $hora<=12){
         return "BUENOS DIAS";
-    }else if($hora>13 && $hora<18){
+    }else if($hora>=13 && $hora<18){
         return "BUENAS TARDES";
     }else{
         return "BUENOS NOCHES";
