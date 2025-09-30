@@ -11,15 +11,16 @@
         <label for="apellido">Apellido</label>
         <input type="text" id="apellido" name="apellido" required><br>
         <label for="edad">Edad</label>
-        <input type="number" id="edad" name="edad" required><br>
-        <label for="medio">Medio de transporte</label>
-        <select id="medio" name="medio" required><br>
-            <option value="coche">Coche</option>
-            <option value="moto">Moto</option>
-            <option value="bicicleta">Bicicleta</option>
-            <option value="transporte_publico">Transporte público</option>
-            <option value="a_pie">A pie</option>
-        </select><br>
+        <br>
+        <input type="radio" id="edad" name="edad" value=15>0 - 15<br>
+        <input type="radio" id="edad" name="edad" value=30>15 - 60<br>
+        <input type="radio" id="edad" name="edad" value=60>60 - 100<br>
+        <p for="medio">¿Que medio de transporte usas?</p>
+        <input type="radio" name="medio" value="coche">coche<br>
+        <input type="radio" name="medio" value="moto">moto<br>
+        <input type="radio" name="medio" value="bicicleta">bicicleta<br>
+        <input type="radio" name="medio" value="transporte_publico">transporte público<br>
+        <br>
         <label for="fecha">Fecha de alta</label>
         <input type="date" id="fecha" name="fecha" required><br>
         <input type="submit" value="Enviar">
@@ -30,21 +31,21 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $apellido = htmlspecialchars($_POST['apellido']);
-    $edad = htmlspecialchars($_POST['edad']);
-    $medio = htmlspecialchars($_POST['medio']);
+    $edad = $_POST['edad'];
+    $medio =$_POST['medio'];
     $fecha = $_POST['fecha'];
     if($name == "" || $apellido == ""){
         echo "<p>Por favor, completa todos los campos del formulario.</p>";
         exit;
     }
-    if ($edad < 15) {
-        echo "<p>Hola $name $apellido, eres muy joven , no te apetece viajar el </p>";
+    if ($edad == 15) {
+        echo "<p>Hola $name $apellido, eres muy joven , no te apetece viajar el  $fecha </p>";
         echo"$fecha";
-    }else if ($edad >= 15 && $edad < 60) {
-        echo "<p>Hola $name $apellido, de verdad te gusta ir en $medio , en ese caso te espero el dia </p>";
+    }else if ($edad== 30) {
+        echo "<p>Hola $name $apellido, de verdad te gusta ir en $medio , en ese caso te espero el dia $fecha </p>";
         echo"$fecha";
     }else{
-        echo "<p>Hola $name $apellido, disfruta de tu viaje no te exigas mucho y no te olvides llevar tus pastillas para el dia </p>";
+        echo "<p>Hola $name $apellido, disfruta de tu viaje no te exigas mucho y no te olvides llevar tus pastillas para el dia $fecha  </p>";
         echo"$fecha";
     }
 }

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = htmlspecialchars($_POST['pass']);
     if(!empty($user) && !empty($pass)){
         echo "Usuario: " . $user . "<br>";
-        echo "Contraseña: " . str_repeat('*', strlen($pass)) . "<br>"; // No mostrar la contraseña real por seguridad
+        echo "Contraseña: " . str_repeat('*', strlen($pass)) . "<br>"; 
     }else{
         echo "Por favor, complete ambos campos.";
     }
