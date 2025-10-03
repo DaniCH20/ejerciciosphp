@@ -8,7 +8,7 @@
     if (isset($_COOKIE['date'])) {
         echo "<p>Su ultima sesion fue: " . htmlspecialchars($_COOKIE['date']) . "</p>";
     } else {
-        echo "<p>No tienes una sesion iniciada</p>";
+        echo "<p>Aun no se ha creado la sesion</p>";
     }
     ?>
     <?php
@@ -17,7 +17,7 @@
 
     if(isset($_COOKIE["date"])) {
         echo "Cookie ha sido creada!<br>";
-        echo "Se ha creado o actualizado la ultima sesion:" . $_COOKIE["date"];
+        echo "Se ha creado o actualizado la ultima sesion: " . $_COOKIE["date"];
     } else {
         echo "No se ha creado la cookie!";
     }
