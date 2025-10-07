@@ -26,8 +26,15 @@ include 'coneccion.php';
             if (mysqli_num_rows($result) > 0) {
                 echo "<table><tr><th>ID</th><th>Titulo</th><th>Autor</th><th>Disponible</th><th></th><th></th></tr>";
                 while($row = mysqli_fetch_assoc($result)) {
-                    $disponible = $row["disponible"] ? "Si" : "No";
-                    echo "<tr><td>" . $row["codigo"]. "</td><td>" . $row["titulo"]. "</td><td>" . $row["autor"]. "</td><td>" .  $disponible. "</td><td><a href='./modificar.php'>Modificar</a></td><td><a href='./borrado.php'>Borrar</a></td></tr>";
+                 $disponible = $row["disponible"] ? "Si" : "No";
+                    echo "<tr>
+                        <td>{$row['codigo']}</td>
+                        <td>{$row['titulo']}</td>
+                        <td>{$row['autor']}</td>
+                        <td>$disponible</td>
+                        <td><a href='modificar.php?id={$row['codigo']}'>Modificar</a></td>
+                        <td><a href='borrado.php?id={$row['codigo']}'>Borrar</a></td>
+                    </tr>";
                 }
                 echo "</table>";
             } else {

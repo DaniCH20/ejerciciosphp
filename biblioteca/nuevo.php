@@ -10,7 +10,7 @@
         <h1>*****Biblioteca*****</h1>
     </header>
     <main>
-        <h2>Login</h2>
+        <h2>Insertar nuevo Libro</h2>
         <form  id="formulario" action="nuevo.php" method="post">
             <label for="title">Titulo:</label>
             <input type="text" id="title" name="title" required>
@@ -22,7 +22,7 @@
             <input type="checkbox" id="disponible" name="disponible" value=1>Si
              <input type="checkbox" id="disponible" name="disponible" value=0>No
             <br>
-            <button type="submit">Iniciar Sesión</button>
+            <button type="submit">Crear</button>
         </form>
     </main>
 </body>
