@@ -1,7 +1,7 @@
 <?php
-// Datu basearen konexioa PDO erabiliz
+
 $host = 'localhost:3306';
-$dbname = 'task';
+$dbname = 'exam_txurdinetflix';
 $username = 'root';
 $password = '';
 
