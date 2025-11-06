@@ -13,7 +13,9 @@
 <body>
     <?php include 'header.php'; ?>
     <main>
-
+        <?php include 'functions.php';
+            getAllPelis();
+        ?>
     </main>
     <?php include 'footer.php'; ?>
 </body>

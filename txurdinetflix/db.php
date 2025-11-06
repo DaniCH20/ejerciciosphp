@@ -13,7 +13,7 @@ $options = [
 ];
 
 try {
-    $pdo = new PDO($dsn, $username, $password, $options);
+    $miPDO = new PDO($dsn, $username, $password, $options);
 } catch (PDOException $e) {
     error_log('DB Error de Conexion: ' . $e->getMessage());
     die('Ezin izan da datu-basearekin konektatu.');

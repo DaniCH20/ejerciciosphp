@@ -1,0 +1,58 @@
+.header {
+    background-color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* TABLA */
+table.oferts-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+}
+
+.oferts-table td, 
+.oferts-table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.oferts-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.oferts-table tr:hover {
+    background-color: #d9ebff;
+}
+
+/* IMAGENES DE LAS PELIS */
+.movie-img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
