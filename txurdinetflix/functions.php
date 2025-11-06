@@ -35,6 +35,14 @@ function imprimirTabla($stmt){
     ";
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+         $image_path = 'img/' . $row['image'];
+                        $default_image = 'img/default.jpg';
+                        
+                        if (!empty($row['image']) && file_exists($image_path)) {
+                            $img_src = $image_path;
+                        } else {
+                            $img_src = $default_image;
+                        }
         echo "
         <tr class='movie'>
             <td>" . htmlspecialchars($row['id']) . "</td>
@@ -42,9 +50,12 @@ function imprimirTabla($stmt){
             <td>" . htmlspecialchars($row['director']) . "</td>
             <td>" . htmlspecialchars($row['year']) . "</td>
             <td>" . htmlspecialchars($row['category_id']) . "</td>
-            <td><img src='./img/" . htmlspecialchars($row['image']) . "' alt='Imagen de la película' class='movie-img'></td>
+            <td><img src='$img_src' 
+            alt='Imagen de la película' class='movie-img' 
+            ></td>
         </tr>
         ";
+        
     }
 
     echo "</tbody></table>";
