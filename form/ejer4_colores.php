@@ -9,4 +9,3 @@ if (isset($_POST['radio'])) {
     echo "<p>No has seleccionado ningún color.</p>";
     echo "<a href='ejer4.php'>Selecciona otro color</a>";
 }
-?>

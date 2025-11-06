@@ -11,13 +11,13 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = htmlspecialchars($_POST['user']);
     $pass = htmlspecialchars($_POST['pass']);
-    if(!empty($user) && !empty($pass)){
+    if (!empty($user) && !empty($pass)) {
         echo "Usuario: " . $user . "<br>";
-        echo "Contraseña: " . str_repeat('*', strlen($pass)) . "<br>"; 
-    }else{
+        echo "Contraseña: " . str_repeat('*', strlen($pass)) . "<br>";
+    } else {
         echo "Por favor, complete ambos campos.";
     }
-}else{
+} else {
     echo "No se han recibido datos.";
 }
 

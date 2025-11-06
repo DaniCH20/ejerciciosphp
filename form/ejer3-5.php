@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Ejercicio 3-5</title>
 </head>
+
 <body>
     <h1>Selecciona tus actividades de ocio</h1>
     <form action="ejer3-5.php" method="post">
@@ -16,8 +18,9 @@
         <br><br>
         <input type="submit" value="Mostrar Seleccionadas">
     </form>
-   
+
 </body>
+
 </html>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h2>Actividades seleccionadas:</h2>";
         echo "<ul>";
         foreach ($actividades as $actividad) {
-            echo "<li>". $actividad. "</li>";
+            echo "<li>" . $actividad . "</li>";
         }
         echo "</ul>";
     } else {
