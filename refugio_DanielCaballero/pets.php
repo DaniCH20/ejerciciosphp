@@ -14,10 +14,15 @@
     </header>
     <main>
         <section>
+            <h2>Mascotas para adoptar</h2>
             <?php
-           
             getMascotas();
-            
+            ?>
+        </section>
+        <section>
+            <h2>Mascotas adoptadas</h2>
+            <?php
+            getPetsAdopt();
             ?>
         </section>
 

@@ -1,6 +1,6 @@
 <?php
 
-$host = 'localhost:3306';
+$host = 'localhost:3307';
 $dbname = 'exam_refugio';
 $username = 'root';
 $password = '';
